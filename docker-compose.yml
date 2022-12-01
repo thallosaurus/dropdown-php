@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+
+  php:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8081:8080
+    volumes:
+      - .:/src
+      - ./php/xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini
+      - ./php/caches:/var/tmp/php

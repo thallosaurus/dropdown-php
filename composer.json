@@ -1,0 +1,23 @@
+{
+    "name": "donstrange/dropdown-php",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Donstrange\\DropdownPhp\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Philipp Gaßner",
+            "email": "philipp.gassner@isaweiden.de"
+        }
+    ],
+    "scripts": {
+        "start": [
+            "Composer\\Config::disableProcessTimeout",
+            "php -S 0.0.0.0:8080"
+        ]
+    },
+    "minimum-stability": "dev",
+    "require": {}
+}

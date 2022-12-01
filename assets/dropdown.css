@@ -1,0 +1,67 @@
+.dropdown {
+    min-width: 400px;
+    position: fixed;
+    z-index: 2;
+    display: none;
+    /* border: 1px solid black; */
+    background-color: white;
+    box-shadow: 0 4px 5px 3px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+}
+
+.dropdown .divider {
+    border-bottom: 1px solid black;
+}
+
+.entry {
+    padding: .25em;
+}
+
+.dropdown .entry:hover:not(.title) {
+    background-color: grey;
+    cursor: pointer;
+}
+
+.dropdown .title {
+    font-weight: bold;
+    text-align: center;
+    /* border-bottom: 1px solid black; */
+}
+
+.dropdown.show {
+    display: inline-block;
+    opacity: 1;
+}
+
+.dropdown .background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    background-color: black;
+    opacity: 0;
+    z-index: -1;
+    /* width: 100px; */
+    /* height: 100px; */
+}
+
+/* IMPORTED */
+
+.menu-options {
+    list-style: none;
+    padding: 10px 0;
+}
+
+.menu-option {
+    font-weight: 500;
+    font-size: 14px;
+    padding: 0px 20px 0px 20px;
+    margin: 5px 0px 5px 0px;
+    cursor: pointer;
+    height: 50px;
+    line-height: 50px;
+    vertical-align: middle;
+    transition: background-color 0.1s ease;
+}
