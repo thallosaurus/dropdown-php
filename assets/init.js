@@ -46,13 +46,13 @@ function dropdownOpen(id, x = null, y = null) {
 
         let left, top;
 
-        if (window.innerWidth < dropdown.offsetWidth + x) {
+        if (window.innerWidth < dropdown.offsetWidth + x + dropdown.clientWidth) {
             left = window.innerWidth - dropdown.offsetWidth;
         } else {
             left = x;
         }
     
-        if (window.innerHeight < dropdown.offsetHeight + y) {
+        if (window.innerHeight < dropdown.offsetHeight + y + dropdown.clientHeight) {
             top = window.innerHeight - dropdown.offsetHeight;
         } else {
             top = y;
