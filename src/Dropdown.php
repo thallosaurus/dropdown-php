@@ -43,7 +43,7 @@ namespace Donstrange\DropdownPhp {
 
         private function renderTitle() {
             if (!is_null($this->title)) {
-                return "<div class='entry title divider'>" . $this->title . "</div>";
+                return "<div class='entry dropdown-title divider'>" . $this->title . "</div>";
             } else {
                 return "";
             }
