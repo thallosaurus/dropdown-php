@@ -20,7 +20,7 @@ use Donstrange\DropdownPhp\Dropdown;
             document.addEventListener("contextmenu", (ctxmenuev) => {
                 // openDropdownById("test_dd");
                 ctxmenuev.preventDefault();
-                open("test_dd", ctxmenuev.pageX, ctxmenuev.pageY)
+                dropdownOpen("test_dd", ctxmenuev.pageX, ctxmenuev.pageY)
                 .then(e => {
                     console.log("Action Id: " + e.actionId);
                 });
@@ -35,9 +35,9 @@ use Donstrange\DropdownPhp\Dropdown;
         $dd->addEntry("1", "Tag Genehmigen");
         $dd->addEntry("2", "Tag Ablehnen");
         $dd->addEntry("3", "Tag unter Vorbehalt freigeben", ["divider"]);
-        $dd->addEntry("10", "Woche Genehmigen");
-        $dd->addEntry("11", "Woche Ablehnen");
-        $dd->addEntry("12", "Woche unter Vorbehalt freigeben", ["divider"]);
+        $dd->addEntry("11", "Woche Genehmigen");
+        $dd->addEntry("12", "Woche Ablehnen");
+        $dd->addEntry("13", "Woche unter Vorbehalt freigeben", ["divider"]);
         $dd->addEntry("xx", "Tag löschen");
         $dd->addEntry("yy", "Woche löschen");
         echo $dd->getOpenButton();

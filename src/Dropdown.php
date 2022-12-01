@@ -62,6 +62,10 @@ namespace Donstrange\DropdownPhp {
             }, $this->entries));
         }
 
+        /**
+         * @deprecated
+         * @return string
+         */
         public function getOpenButton(): string {
             return join("", [
                 "<button type='button' data-dropdown-trigger='".$this->id."'>" . $this->title . " (Debug)</button>"

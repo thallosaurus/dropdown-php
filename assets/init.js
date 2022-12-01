@@ -5,13 +5,13 @@ window.addEventListener("load", (e) => {
         const { dropdownTrigger } = e.dataset;
 
         e.addEventListener("click", (e) => {
-            console.log(e);
-            open(dropdownTrigger, e.pageX, e.pageY);
+            //console.log(e);
+            dropdownOpen(dropdownTrigger, e.pageX, e.pageY);
         });
     })
 });
 
-function open(id, x = null, y = null) {
+function dropdownOpen(id, x = null, y = null) {
     return new Promise((res, rej) => {
 
         // alert("lol");
@@ -61,6 +61,8 @@ function open(id, x = null, y = null) {
         // let left = window.innerWidth - dropdown.clientWidth - x;
         // let top = window.innerHeight - dropdown.clientHeight - y;
     
+        console.log(x, y);
+
         if (x && y) {
             dropdown.style.left = left + "px";
             dropdown.style.top = top + "px";
@@ -72,10 +74,6 @@ function open(id, x = null, y = null) {
 
 function getClickContext(event) {
     console.log(event);
-}
-
-function openDropdownById(id, x = null, y = null) {
-    open(id, x, y);
 }
 
 function closeDropdownById(id) {
